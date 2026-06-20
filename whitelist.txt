@@ -1,0 +1,72 @@
+# LISTA DE PROGRAMAS CONHECIDOS E CONFIÁVEIS
+# Um por linha. Nao apague coisas daqui sem saber o que e.
+# O sistema AVISA quando um programa FORA desta lista tentar sair pra internet.
+
+chrome.exe
+firefox.exe
+msedge.exe
+brave.exe
+opera.exe
+msedgewebview2.exe
+
+# Windows / Microsoft
+svchost.exe
+explorer.exe
+dllhost.exe
+WmiPrvSE.exe
+RuntimeBroker.exe
+SearchHost.exe
+StartMenuExperienceHost.exe
+ShellExperienceHost.exe
+backgroundTaskHost.exe
+ApplicationFrameHost.exe
+TextInputHost.exe
+ctfmon.exe
+winlogon.exe
+csrss.exe
+lsass.exe
+services.exe
+MsMpEng.exe
+MpCmdRun.exe
+NisSrv.exe
+SecurityHealthService.exe
+MpDefenderCoreService.exe
+SgrmBroker.exe
+smartscreen.exe
+spoolsv.exe
+WaaSMedicSvc.exe
+wuauclt.exe
+MoUsoCoreWorker.exe
+TiWorker.exe
+trustedinstaller.exe
+CompatTelRunner.exe
+DeviceCensus.exe
+WindowsUpdateBox.exe
+MusNotification.exe
+
+# Atualizadores comuns
+AdobeUpdateService.exe
+GoogleUpdate.exe
+GoogleCrashHandler.exe
+OneDrive.exe
+Dropbox.exe
+
+# IA / coding agents (estes PODEM sair pra internet, por isso estao na lista)
+# Se aparecer um .exe novo relacionado a IA, eu te aviso antes
+opencode.exe
+hermes.exe
+node.exe
+bun.exe
+python.exe
+python3.exe
+
+# Terminal / shell
+bash.exe
+pwsh.exe
+powershell.exe
+cmd.exe
+wt.exe
+git-bash.exe
+
+# Seu OpenCode ja autenticado
+opencode.exe

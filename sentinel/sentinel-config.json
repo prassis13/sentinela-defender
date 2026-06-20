@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "mode": "learn",
+  "general": {
+    "check_interval_seconds": 5,
+    "log_level": "info",
+    "max_alert_history": 500,
+    "enable_balloon_tips": true,
+    "enable_sound_alerts": false,
+    "auto_start_with_windows": false
+  },
+  "risk_weights": {
+    "signed_microsoft": 40,
+    "signed_other": 30,
+    "publisher_known": 20,
+    "path_program_files": 15,
+    "path_system32": 20,
+    "path_windowsapps": 20,
+    "path_temp": -35,
+    "path_downloads": -25,
+    "path_appdata_temp": -30,
+    "path_hidden_dir": -15,
+    "created_last_7days": -15,
+    "created_last_24h": -25,
+    "no_signature": -20,
+    "invalid_signature": -40,
+    "approved_by_user": 50,
+    "reputation_5plus": 15,
+    "reputation_20plus": 25,
+    "in_whitelist": 30,
+    "unknown_ip_connection": -10,
+    "suspicious_port": -15,
+    "persistence_created": -25,
+    "child_of_cmd_powershell": -20,
+    "hidden_powershell": -20,
+    "process_injection": -30,
+    "multiple_country_connections": -20
+  },
+  "levels": {
+    "safe": { "min_score": 50, "color": "green", "icon": "🟢", "actions": ["log"] },
+    "known": { "min_score": 20, "color": "blue", "icon": "🔵", "actions": ["log", "report"] },
+    "caution": { "min_score": -20, "color": "yellow", "icon": "🟡", "actions": ["log", "report", "notify"] },
+    "high_risk": { "min_score": -50, "color": "orange", "icon": "🟠", "actions": ["log", "report", "notify", "user_decision"] },
+    "critical": { "min_score": -100, "color": "red", "icon": "🔴", "actions": ["log", "report", "notify", "block_network", "suspend", "capture_evidence"] }
+  },
+  "action_policies": {
+    "auto_block": false,
+    "auto_delete": false,
+    "auto_remove_programs": false,
+    "auto_modify_system": false,
+    "require_confirmation_for": ["high_risk", "critical"],
+    "network_block_duration_hours": 24,
+    "max_suspends_per_session": 3
+  },
+  "never_auto_block": {
+    "process_names": [
+      "svchost", "lsass", "csrss", "winlogon", "services",
+      "explorer", "dllhost", "runtimebroker", "systray",
+      "msmpeng", "mpdefendercoreservice", "securityhealthservice",
+      "chrome", "msedge", "firefox", "brave", "opera",
+      "whatsapp.root", "whatsapp",
+      "docker desktop", "com.docker.service",
+      "opencode", "electron",
+      "node", "python", "python3", "pwsh", "powershell", "cmd",
+      "wsl", "wslservice",
+      "lm studio", "lmstudio"
+    ],
+    "directories": [
+      "C:\\Windows\\System32",
+      "C:\\Windows\\SysWOW64",
+      "C:\\Program Files",
+      "C:\\Program Files (x86)",
+      "C:\\ProgramData\\Microsoft\\Windows Defender"
+    ],
+    "publishers": [
+      "Microsoft Corporation",
+      "Microsoft Windows",
+      "Google LLC",
+      "Mozilla Corporation",
+      "Meta Platforms, Inc.",
+      "Docker Inc.",
+      "WhatsApp Inc."
+    ]
+  },
+  "dev_mode": {
+    "enabled": true,
+    "project_directories": [
+      "C:\\Users\\AKALM\\Documents",
+      "C:\\Users\\AKALM\\source",
+      "C:\\Users\\AKALM\\repos"
+    ],
+    "ignore_absence_of_signature": true,
+    "ignore_recent_creation": true,
+    "ignore_user_dir_location": true
+  },
+  "learning": {
+    "observation_days": 7,
+    "auto_approve_after_occurrences": 10,
+    "min_occurrences_for_known": 3,
+    "reset_after_days": 90
+  },
+  "monitoring": {
+    "watch_new_processes": true,
+    "watch_new_connections": true,
+    "watch_new_tasks": true,
+    "watch_new_services": true,
+    "watch_registry_startup": true,
+    "watch_file_creation": true,
+    "connection_poll_interval_ms": 5000,
+    "max_connections_to_show": 100
+  },
+  "reporting": {
+    "html_report": true,
+    "json_log": true,
+    "console_output": true,
+    "max_report_lines": 200
+  }
+}

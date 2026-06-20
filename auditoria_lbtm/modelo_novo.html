@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITULO E META CORRIGIDOS (antes: template generico / meta de ar-condicionado) -->
+<title>Pintura de Alto Padrão em São Paulo | LBTM</title>
+<meta name="description" content="Pintura de alto padrão para apartamentos, coberturas e mansões em São Paulo e Alphaville. Equipe própria, garantia 6 meses, sem danos ao patrimônio. Resposta em 2h.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Pintura de Alto Padrão em São Paulo | LBTM">
+<meta property="og:description" content="Equipe própria. Sem terceirização. Sem danos ao patrimônio. Garantia 6 meses. Atendimento em 2h.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lbtm.com.br/pintura/">
+<link rel="canonical" href="https://lbtm.com.br/pintura/">
+
+<!-- FAVICON PLACEHOLDER -->
+<link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%230f4d2e' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+
+<!-- SCHEMA.ORG COMPLETO (LocalBusiness + Service + FAQ + Review) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://lbtm.com.br/#business",
+      "name": "LBTM - Instalações e Manutenções",
+      "image": "https://lbtm.com.br/logo.png",
+      "telephone": "+5511955906120",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": ["Jardim Europa","Alphaville","Vila Nova Conceição","Vila Olímpia","Itaim Bibi","Oásis","Barueri","Tatuapé","Ipiranga","Perdizes","Mooca"],
+      "openingHours": "Mo-Sa 08:00-18:00"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://lbtm.com.br/pintura/#service",
+      "serviceType": "Pintura Residencial e Comercial de Alto Padrão",
+      "provider": {"@id": "https://lbtm.com.br/#business"},
+      "areaServed": "São Paulo e Alphaville",
+      "description": "Pintura de alto padrão para apartamentos, coberturas e mansões com equipe própria, garantia 6 meses e sem danos ao patrimônio."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "Vocês fazem pintura de cobertura?","acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos coberturas em toda São Paulo, com equipe uniformizada e proteção de patrimônio."}},
+        {"@type": "Question","name": "Qual a garantia do serviço?","acceptedAnswer":{"@type":"Answer","text":"6 meses de garantia para todos os serviços de pintura."}},
+        {"@type": "Question","name": "Vocês são equipe própria?","acceptedAnswer":{"@type":"Answer","text":"Sim. 100% equipe própria, sem terceirização. Você sabe quem entra na sua casa."}},
+        {"@type": "Question","name": "Atendem Alphaville?","acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos São Paulo capital e Alphaville/Barueri."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============================================
+   LBTM - PROJETO DE REDESIGN
+   Design premium, mobile-first, alta conversão
+   Cor principal: verde profundo (#0f4d2e)
+   ============================================ */
+
+:root {
+  --primary: #0f4d2e;
+  --primary-light: #1a6e44;
+  --accent: #1fa169;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1ebe5b;
+  --dark: #0a0e0c;
+  --text: #1f2a26;
+  --text-soft: #5b6760;
+  --border: #e4e8e5;
+  --bg: #fafaf7;
+  --white: #ffffff;
+  --gold: #c5a572;
+  --shadow-sm: 0 1px 2px rgba(15,77,46,0.06);
+  --shadow: 0 4px 12px rgba(15,77,46,0.08);
+  --shadow-lg: 0 12px 32px rgba(15,77,46,0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ====== HEADER ====== */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--primary);
+  text-decoration: none;
+}
+.logo-mark {
+  width: 40px; height: 40px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 800; font-size: 20px;
+}
+.header-cta {
+  background: var(--whatsapp);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.header-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(37,211,102,0.3);
+}
+
+/* ====== HERO ====== */
+.hero {
+  padding: 80px 0 96px;
+  background: linear-gradient(180deg, #fafaf7 0%, #f0f3ee 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(31,161,105,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15,77,46,0.08);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.hero h1 .highlight {
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+.hero h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 0; right: 0;
+  height: 8px;
+  background: rgba(31,161,105,0.25);
+  z-index: -1;
+}
+.hero p.lead {
+  font-size: 19px;
+  color: var(--text-soft);
+  margin-bottom: 32px;
+  max-width: 540px;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.btn-primary {
+  background: var(--whatsapp);
+  color: white;
+  padding: 18px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+}
+.btn-primary:hover {
+  background: var(--whatsapp-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+}
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--border);
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+.btn-secondary:hover {
+  border-color: var(--primary);
+  background: rgba(15,77,46,0.04);
+}
+.hero-trust {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-soft);
+}
+.trust-item svg {
+  width: 20px; height: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* HERO IMAGE - PLACEHOLDER para foto real */
+.hero-visual {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, #2a3d33 0%, #0f4d2e 100%);
+}
+.hero-visual-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+}
+.hero-visual-placeholder::before {
+  content: '📷';
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.hero-visual-placeholder::after {
+  content: 'FOTO: Apartamento de alto padrão recém-pintado · Jardim Europa';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+}
+.hero-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+.hero-badge-stars { color: #fbbf24; font-size: 14px; }
+.hero-badge-text { font-size: 13px; font-weight: 600; color: var(--dark); }
+
+/* ====== SECTIONS ====== */
+section { padding: 80px 0; }
+.section-dark {
+  background: var(--dark);
+  color: white;
+}
+.section-soft {
+  background: #f0f3ee;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.section-title .eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+.section-title h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.section-dark .section-title h2 { color: white; }
+.section-title p {
+  font-size: 18px;
+  color: var(--text-soft);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.section-dark .section-title p { color: rgba(255,255,255,0.7); }
+
+/* ====== 4 COMPROMISSOS ====== */
+.commitments {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.commitment {
+  background: white;
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+  border: 1px solid var(--border);
+}
+.commitment:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.commitment-icon {
+  width: 56px; height: 56px;
+  background: rgba(15,77,46,0.08);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.commitment-icon svg { width: 28px; height: 28px; color: var(--primary); }
+.commitment h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.commitment p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* ====== SERVICOS ====== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+  border: 1px solid var(--border);
+}
+.service:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.service-image {
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, #2a3d33 0%, #0f4d2e 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+}
+.service-image::before {
+  content: '📷 ' attr(data-label);
+}
+.service-content {
+  padding: 28px 24px;
+}
+.service-tag {
+  display: inline-block;
+  background: rgba(15,77,46,0.08);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+.service h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.service p {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+.service-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { gap: 8px; }
+
+/* ====== PROCESSO ====== */
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.process::before {
+  content: '';
+  position: absolute;
+  top: 28px; left: 12.5%; right: 12.5%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+  z-index: 0;
+}
+.process-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.process-num {
+  width: 56px; height: 56px;
+  background: var(--white);
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: 800; color: var(--primary);
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 2;
+}
+.process-step h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+.process-step p {
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+/* ====== CASES / PORTFOLIO ====== */
+.cases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.case {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(135deg, #2a3d33 0%, #0f4d2e 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+  transition: all 0.3s;
+}
+.case:hover {
+  transform: scale(1.02);
+}
+.case::before {
+  content: '📷 ' attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+}
+.case-info {
+  position: relative;
+  z-index: 2;
+  background: rgba(15,77,46,0.9);
+  backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+}
+.case-info strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.case-info span {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ====== DEPOIMENTOS ====== */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial {
+  background: white;
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  position: relative;
+}
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 24px;
+  font-size: 80px;
+  color: var(--accent);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+.testimonial-stars {
+  color: #fbbf24;
+  font-size: 16px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+.testimonial-text {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.testimonial-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2a3d33 0%, #0f4d2e 100%);
+  color: rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.testimonial-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dark);
+}
+.testimonial-role {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+/* ====== BAIRROS ====== */
+.bairros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.bairro {
+  background: white;
+  color: var(--primary);
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+/* ====== SOBRE / DONO ====== */
+.about {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-photo {
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #2a3d33 0%, #0f4d2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+.about-photo::before {
+  content: '📷 Foto do Leandro Barbieri (uniformizado)';
+  text-align: center;
+  padding: 20px;
+}
+.about h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.about p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.about-signature {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 24px;
+  font-size: 17px;
+}
+
+/* ====== FAQ ====== */
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-q {
+  padding: 20px 24px;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  list-style: none;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after {
+  content: '+';
+  font-size: 24px;
+  color: var(--accent);
+  transition: transform 0.3s;
+}
+.faq-item[open] .faq-q::after {
+  transform: rotate(45deg);
+}
+.faq-a {
+  padding: 0 24px 20px;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* ====== CTA FINAL ====== */
+.cta-final {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+.cta-final h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.cta-final p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-final .btn-primary {
+  background: white;
+  color: var(--primary);
+  font-size: 18px;
+  padding: 20px 36px;
+}
+.cta-final .btn-primary:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.7);
+  padding: 60px 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer h4 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+.footer a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.footer a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* ====== WHATSAPP STICKY ====== */
+.whatsapp-sticky {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  background: var(--whatsapp);
+  color: white;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+  z-index: 100;
+  text-decoration: none;
+  transition: transform 0.2s;
+  animation: pulse 2s infinite;
+}
+.whatsapp-sticky:hover { transform: scale(1.1); }
+.whatsapp-sticky svg { width: 30px; height: 30px; }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 8px 24px rgba(37,211,102,0.7), 0 0 0 12px rgba(37,211,102,0.1); }
+}
+
+/* ====== PLACEHOLDER NOTICES ====== */
+.placeholder-notice {
+  position: fixed;
+  top: 80px; right: 20px;
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 12px;
+  color: #92400e;
+  max-width: 280px;
+  z-index: 200;
+  box-shadow: var(--shadow);
+  font-weight: 500;
+}
+.placeholder-notice strong { display: block; margin-bottom: 4px; }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 968px) {
+  .hero-grid, .about, .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .commitments, .services, .cases, .testimonials { grid-template-columns: repeat(2, 1fr); }
+  .process { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .process::before { display: none; }
+  .hero { padding: 48px 0 64px; }
+  section { padding: 56px 0; }
+}
+@media (max-width: 600px) {
+  .commitments, .services, .cases, .testimonials, .process { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas a { justify-content: center; }
+  .header-cta span { display: none; }
+  .placeholder-notice { top: auto; bottom: 90px; right: 10px; left: 10px; max-width: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== PLACEHOLDER NOTICE (aparece no prototipo) ====== -->
+<div class="placeholder-notice">
+  <strong>🔧 PROTÓTIPO</strong>
+  Imagens e alguns textos são placeholders. Onde aparece 📷, é onde entram fotos reais (IA ou do cliente).
+</div>
+
+<!-- ====== HEADER ====== -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark">L</span>
+      <span>LBTM</span>
+    </a>
+    <a href="https://wa.me/5511955906120?text=Olá,%20quero%20orçamento%20de%20pintura" class="header-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>Orçamento em 2h</span>
+    </a>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow">São Paulo · Alphaville · Alto Padrão</span>
+        <!-- H1 OTIMIZADO: keyword + publico + local -->
+        <h1>Pintura de <span class="highlight">Alto Padrão</span> em São Paulo — Equipe Própria e Acabamento Impecável</h1>
+        <p class="lead">Atendemos apartamentos, coberturas e mansões em toda São Paulo e Alphaville. Equipe uniformizada, sem terceirização, sem danos ao patrimônio, com garantia de 6 meses e resposta em até 2 horas.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5511955906120?text=Quero%20orçamento%20de%20pintura" class="btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Solicitar Orçamento em 2h
+          </a>
+          <a href="#processo" class="btn-secondary">
+            Ver Como Funciona →
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Equipe 100% Própria
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantia 6 Meses
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Resposta em 2h
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem Danos ao Patrimônio
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- PLACEHOLDER PARA FOTO REAL: apartamento/cobertura recém-pintada -->
+        <div class="hero-visual">
+          <div class="hero-visual-placeholder"></div>
+          <div class="hero-badge">
+            <span class="hero-badge-stars">★★★★★</span>
+            <span class="hero-badge-text">4.9/5 · Clientes SP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 4 COMPROMISSOS ====== -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Nossos Compromissos</span>
+      <h2>4 garantias que fazem a diferença na sua obra</h2>
+      <p>Não falamos apenas de tinta. Falamos de tranquilidade, prazo e resultado.</p>
+    </div>
+    <div class="commitments">
+      <div class="commitment">
+        <div class="commitment-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-2-2"/></svg>
+        </div>
+        <h3>Equipe Própria Uniformizada</h3>
+        <p>Você sabe quem entra na sua casa. Sem surpresa, sem desconhecidos.</p>
+      </div>
+      <div class="commitment">
+        <div class="commitment-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Resposta em até 2 horas</h3>
+        <p>Solicite o orçamento e receba retorno no mesmo dia útil.</p>
+      </div>
+      <div class="commitment">
+        <div class="commitment-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Sem Danos ao Patrimônio</h3>
+        <p>Coberturas, proteção de móveis, piso e acabamentos premium.</p>
+      </div>
+      <div class="commitment">
+        <div class="commitment-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+        </div>
+        <h3>Garantia 6 Meses</h3>
+        <p>Garantia escrita em todos os serviços de pintura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVIÇOS ====== -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">O que Fazemos</span>
+      <h2>Pintura de alto padrão em cada detalhe</h2>
+      <p>Do apartamento compacto à cobertura triplex. Do lobby do prédio à fachada da mansão.</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <div class="service-image" data-label="Apartamento de Alto Padrão"></div>
+        <div class="service-content">
+          <span class="service-tag">Mais procurado</span>
+          <h3>Apartamento de Alto Padrão</h3>
+          <p>Pintura interna completa, com proteção de mobiliário, preparo de parede, massa, primer e acabamento premium. Ideal para Jardins, Itaim e Vila Nova Conceição.</p>
+          <a href="#contato" class="service-link">Solicitar orçamento →</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-image" data-label="Cobertura Duplex/Triplex"></div>
+        <div class="service-content">
+          <span class="service-tag">Especialidade</span>
+          <h3>Cobertura Duplex / Triplex</h3>
+          <p>Equipes dimensionadas para grandes áreas, com gestão de cronograma, fornecedores e acabamentos diferenciados. Atendemos toda a região dos Jardins.</p>
+          <a href="#contato" class="service-link">Solicitar orçamento →</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-image" data-label="Mansão Alphaville/Barueri"></div>
+        <div class="service-content">
+          <span class="service-tag">Premium</span>
+          <h3>Mansão em Alphaville / Barueri</h3>
+          <p>Pintura interna e externa, fachada, áreas de lazer e detalhes arquitetônicos. Tratamento de superfície, textura e efeitos especiais.</p>
+          <a href="#contato" class="service-link">Solicitar orçamento →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROCESSO ====== -->
+<section id="processo">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Como Funciona</span>
+      <h2>Do primeiro contato à obra entregue — em 4 passos</h2>
+      <p>Processo claro, sem surpresas. Você acompanha cada etapa.</p>
+    </div>
+    <div class="process">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h3>Briefing no WhatsApp</h3>
+        <p>Conte o que precisa. Respondemos em até 2h com perguntas técnicas.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h3>Visita técnica gratuita</h3>
+        <p>Avaliamos o ambiente, medimos áreas e sugerimos acabamentos.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h3>Orçamento detalhado</h3>
+        <p>Proposta por escrito, sem surpresa, com cronograma e garantia.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h3>Execução e entrega</h3>
+        <p>Equipe uniformizada, proteção do ambiente, limpeza final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CASES (PORTFOLIO) ====== -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Cases Recentes</span>
+      <h2>Obras entregues em São Paulo e Alphaville</h2>
+      <p>Cada projeto é um cliente satisfeito. Conheça alguns dos nossos cases.</p>
+    </div>
+    <div class="cases">
+      <div class="case" data-label="Cobertura 320m² - Jardins">
+        <div class="case-info">
+          <strong>Cobertura Duplex</strong>
+          <span>320m² · Jardim Europa · 22 dias</span>
+        </div>
+      </div>
+      <div class="case" data-label="Apto 180m² - Itaim">
+        <div class="case-info">
+          <strong>Apartamento Alto Padrão</strong>
+          <span>180m² · Itaim Bibi · 12 dias</span>
+        </div>
+      </div>
+      <div class="case" data-label="Mansão 600m² - Alphaville">
+        <div class="case-info">
+          <strong>Mansão Térrea</strong>
+          <span>600m² · Alphaville · 35 dias</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DEPOIMENTOS ====== -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">O que Dizem Nossos Clientes</span>
+      <h2>Confiança construída em cada obra</h2>
+      <p>Clientes que voltam e indicam. Veja o que dizem.</p>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Contratei a LBTM para pintar meu apartamento no Jardim Europa. Equipe pontual, cuidadosa com os móveis e acabamento impecável. Recomendo sem pensar.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">Foto</div>
+          <div>
+            <div class="testimonial-name">[Nome do Cliente]</div>
+            <div class="testimonial-role">Médico · Jardim Europa · Apto 220m²</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Pintaram a fachada da minha casa em Alphaville. Prazo cumprido, sem respingo, comunicação excelente durante toda a obra. Serviço premium de verdade.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">Foto</div>
+          <div>
+            <div class="testimonial-name">[Nome do Cliente]</div>
+            <div class="testimonial-role">Empresário · Alphaville · Casa 480m²</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Atendimento diferenciado desde o primeiro WhatsApp. A LBTM entende o que cliente de alto padrão espera. Pintura da cobertura ficou perfeita.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">Foto</div>
+          <div>
+            <div class="testimonial-name">[Nome do Cliente]</div>
+            <div class="testimonial-role">Advogada · Vila Nova Conceição · Cobertura 280m²</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BAIRROS ====== -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Atendimento</span>
+      <h2>Onde estamos atendendo</h2>
+      <p>São Paulo capital, Alphaville e Barueri. Conheça os bairros:</p>
+    </div>
+    <div class="bairros">
+      <span class="bairro">Jardim Europa</span>
+      <span class="bairro">Jardim América</span>
+      <span class="bairro">Itaim Bibi</span>
+      <span class="bairro">Vila Nova Conceição</span>
+      <span class="bairro">Vila Olímpia</span>
+      <span class="bairro">Alphaville</span>
+      <span class="bairro">Barueri</span>
+      <span class="bairro">Oásis</span>
+      <span class="bairro">Perdizes</span>
+      <span class="bairro">Ipiranga</span>
+      <span class="bairro">Tatuapé</span>
+      <span class="bairro">Mooca</span>
+      <span class="bairro">Vila Prudente</span>
+      <span class="bairro">Vila Maria</span>
+      <span class="bairro">Freguesia do Ó</span>
+      <span class="bairro">Aclimação</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SOBRE / DONO ====== -->
+<section class="section-dark">
+  <div class="container">
+    <div class="about">
+      <div>
+        <div class="about-photo"></div>
+      </div>
+      <div>
+        <h2>Quem está por trás da LBTM</h2>
+        <p>A LBTM nasceu em 2023, na zona sul de São Paulo, com uma proposta simples: oferecer serviços de manutenção e reforma com a qualidade e o cuidado que o cliente de alto padrão espera.</p>
+        <p>Hoje, somos uma equipe completa, 100% própria, capaz de entregar projetos de pintura, elétrica, marcenaria sob medida e ar-condicionado, sem precisar terceirizar nenhum serviço.</p>
+        <p>Isso significa para você: <strong style="color: var(--accent);">um único ponto de contato, prazo cumprido, qualidade controlada e zero dor de cabeça.</strong></p>
+        <p class="about-signature">— Leandro Barbieri, fundador</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Perguntas Frequentes</span>
+      <h2>Tire suas dúvidas</h2>
+      <p>As perguntas mais comuns de quem está planejando uma obra de alto padrão.</p>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary class="faq-q">Vocês fazem pintura de cobertura duplex e triplex?</summary>
+        <div class="faq-a">Sim. Atendemos coberturas em toda São Paulo, com equipe dimensionada para grandes áreas, proteção total do patrimônio e cronograma garantido.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Qual a garantia do serviço de pintura?</summary>
+        <div class="faq-a">6 meses de garantia por escrito, cobrindo descascamento, bolhas e desbotamento precoce em todos os serviços de pintura.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Vocês são equipe própria ou terceirizada?</summary>
+        <div class="faq-a">100% equipe própria. Todos os profissionais são uniformizados, identificados e treinados. Você sempre sabe quem está entrando na sua casa.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Atendem Alphaville e Barueri?</summary>
+        <div class="faq-a">Sim, atendemos toda a região de Alphaville, Barueri, Tamboré e Oásis, com equipe local e deslocamento incluso no orçamento.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Como é protegido o mobiliário durante a obra?</summary>
+        <div class="faq-a">Coberturas com lona e fita específica, mobiliário embalado, piso protegido com manta, e ao final da obra é feita limpeza completa do ambiente.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Qual o prazo médio para uma obra residencial?</summary>
+        <div class="faq-a">Apartamento de 150m²: 10-15 dias. Cobertura 300m²: 20-30 dias. Mansão: 30-45 dias. O cronograma exato é definido na visita técnica.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Como solicito o orçamento?</summary>
+        <div class="faq-a">Pelo WhatsApp (11) 95590-6120. Envie fotos do ambiente, metragem aproximada e bairro. Respondemos em até 2 horas úteis com próximos passos.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA FINAL ====== -->
+<section class="cta-final" id="contato">
+  <div class="container">
+    <h2>Pronto para pintar sem dor de cabeça?</h2>
+    <p>Solicite seu orçamento agora. Resposta em até 2 horas, sem compromisso, com visita técnica gratuita em São Paulo e Alphaville.</p>
+    <a href="https://wa.me/5511955906120?text=Quero%20orçamento%20de%20pintura%20de%20alto%20padrão" class="btn-primary" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar Agora no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo" style="color: white; margin-bottom: 16px;">
+          <span class="logo-mark">L</span>
+          <span>LBTM</span>
+        </a>
+        <p style="font-size: 14px; line-height: 1.6;">Instalações, manutenções e reformas de alto padrão em São Paulo. Equipe própria, garantia 6 meses, sem terceirização.</p>
+        <p style="margin-top: 16px; font-size: 13px;">
+          <strong style="color: white;">contato@lbtm.com.br</strong> · (11) 95590-6120
+        </p>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <a href="/pintura/">Pintura</a>
+        <a href="/eletrica/">Elétrica</a>
+        <a href="/marcenaria/">Móveis Planejados</a>
+        <a href="/ar-condicionado/">Ar-Condicionado</a>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <a href="#">Jardins</a>
+        <a href="#">Alphaville</a>
+        <a href="#">Vila Nova Conceição</a>
+        <a href="#">Itaim Bibi</a>
+        <a href="#">+ 12 bairros</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 LBTM Instalações e Manutenções · CNPJ XX.XXX.XXX/0001-XX · Todos os direitos reservados
+    </div>
+  </div>
+</footer>
+
+<!-- ====== WHATSAPP STICKY ====== -->
+<a href="https://wa.me/5511955906120?text=Quero%20orçamento%20de%20pintura" class="whatsapp-sticky" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>

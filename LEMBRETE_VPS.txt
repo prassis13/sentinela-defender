@@ -1,0 +1,47 @@
+LEMBRETE IMPORTANTE - CONFIGURAR PROTECAO NO VPS
+==================================================
+
+Data deste lembrete: 31/05/2026
+Acao pendente: CONFIGURAR ESTE SISTEMA DE SEGURANCA NO VPS
+
+O QUE COPIAR PRO VPS:
+
+1. Toda a pasta: C:\Users\AKALM\seguranca\
+   - auditar.ps1
+   - whitelist.txt
+   - consultar.bat
+   - log/
+
+2. Instalar tarefa agendada:
+   schtasks /Create /TN "AuditoriaSeguranca_Hermes" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -File auditar.ps1" /SC HOURLY /MO 1 /F
+
+3. Adicionar ao crontab do Linux (se for Linux):
+   0 * * * * /root/seguranca/auditar.sh
+
+ADAPTACOES PARA VPS:
+
+- Windows VPS: rodar exatamente igual
+- Linux VPS: reescrever auditar.ps1 em bash + usar ss/netstat em vez de Get-NetTCPConnection
+- Configurar firewall do VPS (iptables/nftables) para bloquear saidas nao autorizadas
+- Se for VPS barato ($5/mes tipo Racknerd/Hetzner), ja vem com firewall basico
+
+CHECKLIST DE SEGURANCA DO VPS:
+
+[ ] Trocar porta SSH (22 -> 2222 ou outra)
+[ ] Desabilitar login root por senha (so chave SSH)
+[ ] Instalar fail2ban
+[ ] Configurar firewall (ufw ou iptables)
+[ ] Manter sistema atualizado (unattended-upgrades)
+[ ] Auditar saidas de rede (este sistema)
+[ ] Monitor de login (SSH, sudo)
+[ ] Backup automatico semanal
+
+PROVEDORES BARATOS:
+- Hetzner: 4€/mes muito confiavel
+- Racknerd: $10/ano
+- Contabo: 4€/mes
+- Oracle Cloud: free tier (sempre gratis)
+- Google Cloud: free tier limitado
+- AWS Lightsail: $3.50/mes
+
+ABRIR ESTE LEMBRETE: notepad C:\Users\AKALM\seguranca\LEMBRETE_VPS.txt
