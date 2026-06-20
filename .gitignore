@@ -14,3 +14,13 @@ Desktop.ini
 
 # OS
 .DS_Store
+
+# Sensitive / secrets
+backup_hermes_pre_desktop/
+backup_pre_sentinel/
+relatorio.html
+config.yaml
+*.env
+*.db
+*.db-shm
+*.db-wal
