@@ -1,4 +1,4 @@
-Add-Type -AssemblyName System.Windows.Forms
+﻿Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms.DataVisualization
 
@@ -82,11 +82,21 @@ function Initialize-Dashboard {
     $btnRefresh = New-Object System.Windows.Forms.Button
     $btnRefresh.Text = "Atualizar"
     $btnRefresh.Location = New-Object System.Drawing.Point(770, 10)
-    $btnRefresh.Size = New-Object System.Drawing.Size(100, 30)
+    $btnRefresh.Size = New-Object System.Drawing.Size(60, 25)
     $btnRefresh.BackColor = [System.Drawing.Color]::FromArgb(78, 201, 176)
     $btnRefresh.FlatStyle = "Flat"
     $btnRefresh.Add_Click({ Update-DashboardData })
     $topPanel.Controls.Add($btnRefresh)
+
+    $btnFechar = New-Object System.Windows.Forms.Button
+    $btnFechar.Text = "Fechar"
+    $btnFechar.Location = New-Object System.Drawing.Point(770, 42)
+    $btnFechar.Size = New-Object System.Drawing.Size(60, 25)
+    $btnFechar.BackColor = [System.Drawing.Color]::FromArgb(80, 80, 80)
+    $btnFechar.FlatStyle = "Flat"
+    $btnFechar.ForeColor = [System.Drawing.Color]::White
+    $btnFechar.Add_Click({ $script:DashboardForm.Hide() })
+    $topPanel.Controls.Add($btnFechar)
 
     $form.Controls.Add($topPanel)
 

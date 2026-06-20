@@ -1,40 +1,49 @@
 # Roadmap
 
-## v0.1-alpha (atual)
-- [x] Inventário de componentes
-- [x] Backup do sistema original
-- [x] Estrutura de diretórios
-- [x] Configuração central
-- [x] Utilitários compartilhados
-- [x] GitHub e versionamento
-- [ ] Motor de risco
-- [ ] Eventos WMI
-- [ ] Bandeja do Windows
-- [ ] Dashboard
+## v1.0.0 ✅ (atual)
+- [x] Motor de risco com score -100 a +100
+- [x] Motor de regras allow/block com expiração automática
+- [x] Monitoramento híbrido WMI push + polling
+- [x] Ícone na bandeja do Windows com NotifyIcon
+- [x] Dashboard WinForms com auto-refresh
+- [x] Modo aprendizado e modo proteção
+- [x] Modo desenvolvedor
+- [x] Whitelist inteligente e reputação automática
+- [x] Estrutura GitHub com README, CHANGELOG, ROADMAP
+- [x] Proteção para Windows, navegadores, Docker, Node.js, Python, IA tools
 
-## v0.2-alpha
-- [ ] Modo aprendizado (7 dias)
-- [ ] Modo desenvolvedor
-- [ ] Whitelist inteligente
-- [ ] Reputação automática
-- [ ] Relatórios HTML aprimorados
+## v1.1 — Estabilização e Qualidade
+- [ ] Testes com programas reais (compilação, npm, pip, IA tools)
+- [ ] Ajuste de pesos do score baseado em feedback real
+- [ ] Redução de falsos positivos
+- [ ] Modo pânico (suspende todos os watchers, desativa firewall rules)
+- [ ] Tela de saúde do sistema
+- [ ] Captura de evidências (dumps, conexões, snapshot de processo)
+- [ ] Relatórios HTML com histórico e gráficos
+- [ ] Notificações via Windows Toast (W10/11 nativo)
 
-## v0.3-beta
-- [ ] Modo proteção ativo
-- [ ] Bloqueio de rede para crítico
-- [ ] Captura de evidências
-- [ ] Tela de saúde
-- [ ] Modo pânico
-- [ ] Testes de compatibilidade
+## v1.2 — Distribuição
+- [ ] Ícone oficial (.ico, .png) e logotipo
+- [ ] Script de instalação automática (instalar_sentinela.ps1)
+- [ ] Script de atualização via GitHub
+- [ ] Script de backup e restauração
+- [ ] SentinelaDefender.exe (compilação via ps2exe ou similar)
+- [ ] Setup.exe para distribuição simplificada
+- [ ] Testes de compatibilidade em Windows 10 e 11 limpos
 
-## v1.0
-- [ ] Testes com programas reais
-- [ ] Ajuste de pesos do score
-- [ ] Documentação completa
-- [ ] Release oficial
+## v2.0 — Colaborativo
+- [ ] Repositório aberto para Issues e Pull Requests
+- [ ] Documentação para contribuidores (CONTRIBUTING.md)
+- [ ] Testes automatizados (Pester)
+- [ ] GitHub Actions para validação de PRs
+- [ ] Modo servidor (agente remoto, dashboard central)
+- [ ] API REST para integração com SIEM / Hermes
+- [ ] Alertas via Telegram, Discord, Webhook
 
-## Futuro
-- [ ] Modo servidor (múltiplos hosts)
-- [ ] Integração com SIEM
-- [ ] Alertas via Telegram/Hermes
-- [ ] Interface web
+## Futuro (visão)
+- [ ] Interface web responsiva (substitui ou complementa WinForms)
+- [ ] Histórico de conexões com geolocalização (MaxMind GeoLite)
+- [ ] Detecção de anomalias comportamentais (ML leve)
+- [ ] Plugin system para skills de segurança
+- [ ] Suporte a múltiplos hosts (dashboard consolidado)
+- [ ] Marketplace de regras comunitárias

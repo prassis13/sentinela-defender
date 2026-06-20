@@ -1,4 +1,4 @@
-$script:RulesFile = "$script:SentinelDir\data\config\blocked_rules.json"
+﻿$script:RulesFile = "$script:SentinelDir\data\config\blocked_rules.json"
 
 function Get-AllowRules {
     $file = "$script:ReputationDir\approved_apps.json"

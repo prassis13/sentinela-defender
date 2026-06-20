@@ -1,4 +1,4 @@
-param(
+﻿param(
     [switch]$Dashboard,
     [switch]$Tray,
     [switch]$NoTray
@@ -103,9 +103,13 @@ function Start-SentinelLoop {
 
     while ($script:Running) {
         [System.Windows.Forms.Application]::DoEvents()
+        Get-Event -SourceIdentifier "Sentinel.ProcessPoll" -ErrorAction SilentlyContinue | Remove-Event -ErrorAction SilentlyContinue
+        Get-Event -SourceIdentifier "Sentinel.RegistryPoll" -ErrorAction SilentlyContinue | Remove-Event -ErrorAction SilentlyContinue
+        Get-Event -SourceIdentifier "Sentinel.TaskPoll" -ErrorAction SilentlyContinue | Remove-Event -ErrorAction SilentlyContinue
+        Get-Event -SourceIdentifier "Sentinel.ConnPoll" -ErrorAction SilentlyContinue | Remove-Event -ErrorAction SilentlyContinue
         Start-Sleep -Milliseconds 500
 
-        if (-not (Get-EventSubscriber -SourceIdentifier "Sentinel.ProcessStart" -ErrorAction SilentlyContinue)) {
+        if (-not $script:WatchersStarted) {
             if ($script:Running) { Start-SentinelWatchers }
         }
     }

@@ -1,4 +1,4 @@
-function Get-RiskScore {
+﻿function Get-RiskScore {
     param(
         [int]$ProcessId,
         [string]$ProcessName,
@@ -108,9 +108,9 @@ function Classify-Risk {
 }
 
 function Get-ProcessRiskDetails {
-    param([int]$PID)
+    param([int]$ProcessId)
 
-    $details = Get-ProcessDetails -PID $PID
+    $details = Get-ProcessDetails -ProcessId $ProcessId
     if (-not $details) { return $null }
 
     $connections = Get-NetTCPConnection -State Established -ErrorAction SilentlyContinue |

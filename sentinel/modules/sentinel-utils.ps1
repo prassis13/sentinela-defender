@@ -1,4 +1,4 @@
-$script:BaseDir = "C:\Users\AKALM\seguranca"
+﻿$script:BaseDir = "C:\Users\AKALM\seguranca"
 $script:SentinelDir = "$script:BaseDir\sentinel"
 $script:DataDir = "$script:SentinelDir\data"
 $script:ReputationDir = "$script:DataDir\reputation"
@@ -53,12 +53,15 @@ function Get-ProcessSignature {
 }
 
 function Get-ProcessDetails {
-    param([int]$PID)
+    param([int]$ProcessId)
     try {
-        $proc = Get-Process -Id $PID -ErrorAction Stop
+        $proc = Get-Process -Id $ProcessId -ErrorAction SilentlyContinue
+        if (-not $proc) { return $null }
         $path = $proc.Path
+        if ([string]::IsNullOrEmpty($path)) { return $null }
+        if (-not (Test-Path $path)) { return $null }
         $details = [PSCustomObject]@{
-            ProcessId = $PID
+            ProcessId = $ProcessId
             ProcessName = $proc.ProcessName
             Path = $path
             Company = $proc.Company
@@ -69,7 +72,7 @@ function Get-ProcessDetails {
             CreationTime = if ($path) { (Get-Item $path -ErrorAction SilentlyContinue).CreationTime } else { $null }
             CommandLine = $proc.CommandLine
             StartTime = $proc.StartTime
-            ParentPID = (Get-CimInstance -ClassName Win32_Process -Filter "ProcessId = $PID" -ErrorAction SilentlyContinue).ParentProcessId
+            ParentPID = (Get-CimInstance -ClassName Win32_Process -Filter "ProcessId = $ProcessId" -ErrorAction SilentlyContinue).ParentProcessId
         }
         return $details
     } catch {
@@ -175,7 +178,7 @@ function Add-Alert {
         [string]$RemoteAddress,
         [int]$RemotePort,
         [string]$Summary,
-        [int]$PID
+        [int]$ProcessId
     )
     $alerts = Get-AlertHistory
     $alert = [PSCustomObject]@{
@@ -188,7 +191,7 @@ function Add-Alert {
         RemoteAddress = $RemoteAddress
         RemotePort = $RemotePort
         Summary = $Summary
-        PID = $PID
+        PID = $ProcessId
         ID = [guid]::NewGuid().ToString().Substring(0, 8)
     }
     $alerts = @($alert) + $alerts
@@ -213,7 +216,11 @@ function Save-AlertHistory {
 function Get-PendingAlerts {
     $file = "$script:ReputationDir\pending_alerts.json"
     if (Test-Path $file) {
-        try { return Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json } catch { return @() }
+        try {
+            $result = Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json
+            if ($result -is [System.Collections.IEnumerable]) { return @($result) }
+            return @()
+        } catch { return @() }
     }
     return @()
 }
@@ -226,7 +233,7 @@ function Save-PendingAlerts {
 
 function Add-PendingAlert {
     param($Alert)
-    $pending = Get-PendingAlerts
+    $pending = @(Get-PendingAlerts)
     $pending += $Alert
     Save-PendingAlerts -Alerts $pending
 }

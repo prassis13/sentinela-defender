@@ -1,4 +1,4 @@
-Add-Type -AssemblyName System.Windows.Forms
+﻿Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
 $script:TrayIcon = $null
@@ -150,7 +150,7 @@ function Show-TrayDecision {
 
     $decisionForm = New-Object System.Windows.Forms.Form
     $decisionForm.Text = "Sentinela Defender - Decisão Requerida"
-    $decisionForm.Size = New-Object System.Drawing.Size(520, 260)
+    $decisionForm.Size = New-Object System.Drawing.Size(500, 250)
     $decisionForm.StartPosition = "CenterScreen"
     $decisionForm.TopMost = $true
     $decisionForm.FormBorderStyle = "FixedDialog"
@@ -194,6 +194,15 @@ function Show-TrayDecision {
         if ($IgnoreCallback) { & $IgnoreCallback }
     })
     $decisionForm.Controls.Add($btnIgnore)
+
+    $btnCancel = New-Object System.Windows.Forms.Button
+    $btnCancel.Text = "Cancelar"
+    $btnCancel.Location = New-Object System.Drawing.Point(366, 160)
+    $btnCancel.Size = New-Object System.Drawing.Size(100, 40)
+    $btnCancel.BackColor = [System.Drawing.Color]::FromArgb(100, 100, 100)
+    $btnCancel.ForeColor = [System.Drawing.Color]::White
+    $btnCancel.Add_Click({ $decisionForm.Close() })
+    $decisionForm.Controls.Add($btnCancel)
 
     $decisionForm.ShowDialog()
 }
