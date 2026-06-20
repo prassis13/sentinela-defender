@@ -1,0 +1,16 @@
+﻿# Sentinel project
+sentinel/backup/
+sentinel/evidence/
+sentinel/icons/
+sentinel/data/reputation/*.json
+sentinel/data/alerts/*.json
+sentinel/data/config/blocked_rules.json
+*.log
+
+# Windows
+Thumbs.db
+Desktop.ini
+.BIN/
+
+# OS
+.DS_Store
