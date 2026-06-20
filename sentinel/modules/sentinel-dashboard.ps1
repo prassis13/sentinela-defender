@@ -110,20 +110,26 @@ function Initialize-Dashboard {
 
     $alertsGrid = New-Object System.Windows.Forms.DataGridView
     $alertsGrid.Dock = "Fill"
-    $alertsGrid.BackgroundColor = [System.Drawing.Color]::FromArgb(30, 30, 30)
+    $alertsGrid.BackgroundColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
     $alertsGrid.ForeColor = [System.Drawing.Color]::White
-    $alertsGrid.GridColor = [System.Drawing.Color]::FromArgb(60, 60, 60)
-    $alertsGrid.BorderStyle = "None"
+    $alertsGrid.GridColor = [System.Drawing.Color]::FromArgb(80, 80, 80)
+    $alertsGrid.BorderStyle = "Fixed3D"
+    $alertsGrid.CellBorderStyle = "SingleHorizontal"
     $alertsGrid.RowHeadersVisible = $false
     $alertsGrid.AllowUserToAddRows = $false
     $alertsGrid.AllowUserToDeleteRows = $false
     $alertsGrid.ReadOnly = $true
     $alertsGrid.AutoSizeColumnsMode = "Fill"
     $alertsGrid.SelectionMode = "FullRowSelect"
-    $alertsGrid.ColumnHeadersDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
+    $alertsGrid.ColumnHeadersDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(55, 55, 55)
     $alertsGrid.ColumnHeadersDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
-    $alertsGrid.RowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
-    $alertsGrid.AlternatingRowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(35, 35, 35)
+    $alertsGrid.ColumnHeadersDefaultCellStyle.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+    $alertsGrid.ColumnHeadersHeight = 30
+    $alertsGrid.RowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(58, 58, 58)
+    $alertsGrid.RowsDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
+    $alertsGrid.RowsDefaultCellStyle.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    $alertsGrid.AlternatingRowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(66, 66, 66)
+    $alertsGrid.AlternatingRowsDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
     $alertsGrid.DefaultCellStyle.SelectionBackColor = [System.Drawing.Color]::FromArgb(78, 201, 176)
     $alertsGrid.DefaultCellStyle.SelectionForeColor = [System.Drawing.Color]::Black
     $alertsGrid.Columns.Add("Timestamp", "Data/Hora")
@@ -140,20 +146,26 @@ function Initialize-Dashboard {
 
     $connGrid = New-Object System.Windows.Forms.DataGridView
     $connGrid.Dock = "Fill"
-    $connGrid.BackgroundColor = [System.Drawing.Color]::FromArgb(30, 30, 30)
+    $connGrid.BackgroundColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
     $connGrid.ForeColor = [System.Drawing.Color]::White
-    $connGrid.GridColor = [System.Drawing.Color]::FromArgb(60, 60, 60)
-    $connGrid.BorderStyle = "None"
+    $connGrid.GridColor = [System.Drawing.Color]::FromArgb(80, 80, 80)
+    $connGrid.BorderStyle = "Fixed3D"
+    $connGrid.CellBorderStyle = "SingleHorizontal"
     $connGrid.RowHeadersVisible = $false
     $connGrid.AllowUserToAddRows = $false
     $connGrid.AllowUserToDeleteRows = $false
     $connGrid.ReadOnly = $true
     $connGrid.AutoSizeColumnsMode = "Fill"
     $connGrid.SelectionMode = "FullRowSelect"
-    $connGrid.ColumnHeadersDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
+    $connGrid.ColumnHeadersDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(55, 55, 55)
     $connGrid.ColumnHeadersDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
-    $connGrid.RowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
-    $connGrid.AlternatingRowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(35, 35, 35)
+    $connGrid.ColumnHeadersDefaultCellStyle.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+    $connGrid.ColumnHeadersHeight = 30
+    $connGrid.RowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(58, 58, 58)
+    $connGrid.RowsDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
+    $connGrid.RowsDefaultCellStyle.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    $connGrid.AlternatingRowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(66, 66, 66)
+    $connGrid.AlternatingRowsDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
     $connGrid.Columns.Add("Process", "Processo")
     $connGrid.Columns.Add("PID", "PID")
     $connGrid.Columns.Add("Remote", "Remoto")
@@ -168,20 +180,26 @@ function Initialize-Dashboard {
 
     $pendingGrid = New-Object System.Windows.Forms.DataGridView
     $pendingGrid.Dock = "Fill"
-    $pendingGrid.BackgroundColor = [System.Drawing.Color]::FromArgb(30, 30, 30)
+    $pendingGrid.BackgroundColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
     $pendingGrid.ForeColor = [System.Drawing.Color]::White
-    $pendingGrid.GridColor = [System.Drawing.Color]::FromArgb(60, 60, 60)
-    $pendingGrid.BorderStyle = "None"
+    $pendingGrid.GridColor = [System.Drawing.Color]::FromArgb(80, 80, 80)
+    $pendingGrid.BorderStyle = "Fixed3D"
+    $pendingGrid.CellBorderStyle = "SingleHorizontal"
     $pendingGrid.RowHeadersVisible = $false
     $pendingGrid.AllowUserToAddRows = $false
     $pendingGrid.AllowUserToDeleteRows = $false
     $pendingGrid.ReadOnly = $true
     $pendingGrid.AutoSizeColumnsMode = "Fill"
     $pendingGrid.SelectionMode = "FullRowSelect"
-    $pendingGrid.ColumnHeadersDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
+    $pendingGrid.ColumnHeadersDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(55, 55, 55)
     $pendingGrid.ColumnHeadersDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
-    $pendingGrid.RowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
-    $pendingGrid.AlternatingRowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(35, 35, 35)
+    $pendingGrid.ColumnHeadersDefaultCellStyle.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+    $pendingGrid.ColumnHeadersHeight = 30
+    $pendingGrid.RowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(58, 58, 58)
+    $pendingGrid.RowsDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
+    $pendingGrid.RowsDefaultCellStyle.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    $pendingGrid.AlternatingRowsDefaultCellStyle.BackColor = [System.Drawing.Color]::FromArgb(66, 66, 66)
+    $pendingGrid.AlternatingRowsDefaultCellStyle.ForeColor = [System.Drawing.Color]::White
     $pendingGrid.Columns.Add("Timestamp", "Data/Hora")
     $pendingGrid.Columns.Add("Process", "Processo")
     $pendingGrid.Columns.Add("Level", "Nível")

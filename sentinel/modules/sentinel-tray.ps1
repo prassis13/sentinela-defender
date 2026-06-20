@@ -52,7 +52,7 @@ function Show-BalloonTip {
 }
 
 function Initialize-TrayIcon {
-    param([scriptblock]$DashboardCallback, [scriptblock]$ExitCallback)
+    param($DashboardForm, [scriptblock]$ExitCallback)
 
     $icon = Get-EmbeddedIcon
     $script:TrayIcon = New-Object System.Windows.Forms.NotifyIcon
@@ -72,7 +72,10 @@ function Initialize-TrayIcon {
     $dashboardItem = New-Object System.Windows.Forms.ToolStripMenuItem
     $dashboardItem.Text = "Dashboard"
     $dashboardItem.Add_Click({
-        if ($DashboardCallback) { & $DashboardCallback }
+        try {
+            $DashboardForm.Show()
+            $DashboardForm.BringToFront()
+        } catch {}
     })
     $menu.Items.Add($dashboardItem)
 
@@ -113,7 +116,10 @@ function Initialize-TrayIcon {
     $script:TrayIcon.Add_MouseClick({
         param($sender, $e)
         if ($e.Button -eq [System.Windows.Forms.MouseButtons]::Left) {
-            if ($DashboardCallback) { & $DashboardCallback }
+            try {
+                $DashboardForm.Show()
+                $DashboardForm.BringToFront()
+            } catch {}
         }
     })
 }

@@ -132,7 +132,7 @@ function Save-ApprovedApps {
 function Get-KnownReputation {
     $file = "$script:ReputationDir\known_apps.json"
     if (Test-Path $file) {
-        try { return Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json } catch { return @() }
+        try { $data = Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json; return @($data) } catch { return @() }
     }
     return @()
 }
@@ -202,7 +202,7 @@ function Add-Alert {
 function Get-AlertHistory {
     $file = "$script:AlertsDir\alert_history.json"
     if (Test-Path $file) {
-        try { return Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json } catch { return @() }
+        try { $data = Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json; return @($data) } catch { return @() }
     }
     return @()
 }

@@ -26,15 +26,14 @@ function Start-ProcessWatcher {
         Write-SentinelLog "WMI push unavailable. Using polling fallback." -Level "WARN"
         $timer = New-Object System.Windows.Forms.Timer
         $timer.Interval = 3000
-        $known = @{}
-        try { Get-Process | ForEach-Object { $known[$_.Id] = $_.ProcessName } } catch {}
+        $global:SentinelKnownPIDs = @{}
+        try { Get-Process -ErrorAction SilentlyContinue | ForEach-Object { $global:SentinelKnownPIDs[$_.Id] = $true } } catch {}
         $timer.Add_Tick({
             try {
                 $current = Get-Process -ErrorAction SilentlyContinue
-                $currentIds = @{}
                 foreach ($p in $current) {
-                    $currentIds[$p.Id] = $true
-                    if (-not $known.ContainsKey($p.Id)) {
+                    if (-not $global:SentinelKnownPIDs.ContainsKey($p.Id)) {
+                        $global:SentinelKnownPIDs[$p.Id] = $true
                         $path = $p.Path
                         if (-not [string]::IsNullOrEmpty($path) -and (Test-Path $path -ErrorAction SilentlyContinue)) {
                             $sha256 = Get-FileHashSHA256 -Path $path
@@ -49,7 +48,6 @@ function Start-ProcessWatcher {
                         }
                     }
                 }
-                $known = $currentIds
             } catch {}
         })
         $timer.Start()

@@ -137,20 +137,16 @@ function Initialize-Sentinel {
     $config = Get-Content "$script:SentinelDir\sentinel-config.json" -Raw -Encoding UTF8 | ConvertFrom-Json
     Write-SentinelLog "Mode: $($config.mode)"
 
-    $dashboardAction = {
-        Show-Dashboard
-    }
-
     $exitAction = {
         Stop-Sentinel
     }
 
-    if (-not $NoTray) {
-        Initialize-TrayIcon -DashboardCallback $dashboardAction -ExitCallback $exitAction
-    }
-
     if ($Dashboard) {
         Show-Dashboard
+    }
+
+    if (-not $NoTray) {
+        Initialize-TrayIcon -DashboardForm $script:DashboardForm -ExitCallback $exitAction
     }
 
     Write-SentinelLog "Sentinela Defender ready."
