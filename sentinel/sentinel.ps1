@@ -11,6 +11,7 @@ $script:ModuleDir = "$script:SentinelDir\modules"
 
 . "$script:ModuleDir\sentinel-utils.ps1"
 . "$script:ModuleDir\risk-engine.ps1"
+. "$script:ModuleDir\rule-engine.ps1"
 . "$script:ModuleDir\sentinel-events.ps1"
 . "$script:ModuleDir\sentinel-tray.ps1"
 . "$script:ModuleDir\sentinel-dashboard.ps1"
@@ -40,8 +41,14 @@ function Process-PendingDecisions {
         Set-TrayAlert -HasAlert $true
     }
 
+    Get-ExpiredBlockRules
+
     $remaining = @()
     foreach ($alert in $pending) {
+        if (Test-IsBlocked -SHA256 $alert.SHA256 -Path $alert.Path) {
+            continue
+        }
+
         $shouldPrompt = $true
 
         if ($config.mode -eq "learn") {
@@ -81,13 +88,7 @@ function Process-PendingDecisions {
             }
         } elseif ($shouldPrompt -and $alert.RiskLevel -eq "critical" -and $config.mode -eq "protect") {
             Write-SentinelLog "[ACTION] Blocking network for critical process: $($alert.ProcessName)"
-            $ruleName = "Sentinel_Block_$($alert.ProcessName)_$(Get-Random -Minimum 1000 -Maximum 9999)"
-            try {
-                New-NetFirewallRule -DisplayName $ruleName -Direction Outbound -Program $alert.Path -Action Block -ErrorAction SilentlyContinue
-                Write-SentinelLog "Firewall rule created: $ruleName"
-            } catch {
-                Write-SentinelLog "Failed to create firewall rule: $_" -Level "ERROR"
-            }
+            Add-BlockRule -ProcessName $alert.ProcessName -Path $alert.Path -SHA256 $alert.SHA256 -DurationHours $config.action_policies.network_block_duration_hours
         }
     }
 
